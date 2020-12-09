@@ -11,6 +11,7 @@ var bodyParser   = require('body-parser');
 const expressSwagger = require('express-swagger-generator')(app);
 
 var mascotasRoutes = require('./routes/mascota');
+var categoriaRoutes= require('./routes/categoria');
 var clientesRoutes = require('./routes/cliente');
 
 app.use(morgan('dev')); // log every request to the console
@@ -71,6 +72,8 @@ expressSwagger(optionsExpressSwagger)
 // routes ======================================================================
 app.use('/mascota', mascotasRoutes);
 app.use('/cliente', clientesRoutes);
+app.use('/categoria',categoriaRoutes);
+
 // launch ======================================================================
 
 app.listen(port);
