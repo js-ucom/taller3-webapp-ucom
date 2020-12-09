@@ -13,6 +13,7 @@ const expressSwagger = require('express-swagger-generator')(app);
 var mascotasRoutes = require('./routes/mascota');
 var categoriaRoutes= require('./routes/categoria');
 var clientesRoutes = require('./routes/cliente');
+var servicioRoutes = require('./routes/servicio');
 
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
@@ -73,6 +74,7 @@ expressSwagger(optionsExpressSwagger)
 app.use('/mascota', mascotasRoutes);
 app.use('/cliente', clientesRoutes);
 app.use('/categoria',categoriaRoutes);
+app.use('/servicio',servicioRoutes);
 
 // launch ======================================================================
 
