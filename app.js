@@ -14,6 +14,7 @@ var mascotasRoutes = require('./routes/mascota');
 var categoriaRoutes= require('./routes/categoria');
 var clientesRoutes = require('./routes/cliente');
 var servicioRoutes = require('./routes/servicio');
+var articuloRoutes = require('./routes/articulo');
 
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
@@ -74,12 +75,11 @@ expressSwagger(optionsExpressSwagger)
 app.use('/mascota', mascotasRoutes);
 app.use('/cliente', clientesRoutes);
 app.use('/categoria',categoriaRoutes);
-<<<<<<< HEAD
 app.use('/servicio',servicioRoutes);
+app.use('/articulo',articuloRoutes);
 
-=======
+
 app.use(express.static(__dirname + '/webapp'));
->>>>>>> 8214e697e6fa43a49a948bb2fda1b8ebcbb9cbf1
 // launch ======================================================================
 
 app.listen(port);

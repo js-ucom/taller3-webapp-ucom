@@ -62,6 +62,13 @@ const SQL_OBTENER_LISTA_MASCOTAS="select cm.id, "+
 "left join categoria c3 on c3.id =m.id_categoria "+ 
 "where 2=2 ";
 
+//articulo
+const SQL_INSERTAR_ARTICULO="insert into articulo(descripcion,precio_venta,precio_mayorista,activo) values($1,$2,$3,$4) RETURNING articulo_id";
+const SQL_ACTUALIZAR_ARTICULO="update articulo set descripcion=$1, precio_venta=$2, precio_mayorista=$3, activo=$4 where articulo_id=$5";
+const SQL_ELIMINAR_ARTICULO_POR_ID="delete from articulo where articulo_id=$1";
+const SQL_OBTENER_LISTA_ARTICULOS="select * from articulo order by name desc";
+
+
 function insertarMascota(datos){
     console.log("db => insertarMascota ")
     console.log("datos =>", datos)
@@ -101,6 +108,19 @@ async function obtenerMascotasPorClienteTipo(parametros){
     }
 }
 
+function insertarArticulo(datos){
+    console.log("db => insertarArticulos ")
+    console.log("datos =>", datos)
+    try {
+        const res = pool.query(SQL_INSERTAR_ARTICULO,[datos.descripcion,datos.precio_publico,datos.precio_mayorista,datos.activo]);
+        console.log("res", res);
+        return res;
+    } catch(err) {
+        console.log(err.stack)
+        return err.stack;
+    }
+}
+
 module.exports = {
     obtenerMascotaPorID: (id)=>pool.query(SQL_OBTENER_LISTA_MASCOTA_POR_ID,[id]),
     obtenerListaMascotas: ()=>pool.query(SQL_OBTENER_LISTA_MASCOTAS,[]),
@@ -112,5 +132,8 @@ module.exports = {
     obtenerCategoriaPorID: (id)=>pool.query(SQL_OBTENER_CATEGORIA_POR_ID,[id]),
     obtenerClientePorID: (id)=>pool.query(SQL_OBTENER_LISTA_CLIENTE_POR_ID,[id]),
     obtenerServicioPorIDClienteIDTipo: (id_cliente, id_tipo_servicio)=>pool.query(SQL_OBTENER_LISTA_SERVICIO_POR_IDCLIENTE_IDTIPO,[id_cliente,id_tipo_servicio]),
+    insertarArticulo: insertarArticulo,
+    obtenerListaArticulos: ()=>pool.query(SQL_OBTENER_LISTA_ARTICULOS,[]),
+
 
 }
