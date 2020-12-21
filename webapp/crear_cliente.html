@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crear nuevo cliente</title>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Nuevo cliente&nbsp;</h2>
+      </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <label class="label" for="nombre">Nombre</label>
+          <input class="control" type="text" id="nombre" name="nombre" placeholder="" />
+
+          <br><br>
+          <label class="label" for="apellido">Apellido</label>
+          <input class="control" type="text" id="apellido" name="apellido" placeholder="" />
+
+          <br><br>
+          <label class="label" for="categoria">Tipo de mascota</label>
+          <select class="custom-select" id="categoria" name="categoria">
+            <option value="1">Perro</option>
+            <option value="2">Gato</option>
+            <option value="3">Loro</option>
+            <option value="4">Hamster</option>
+            <option value="5">Tortuga</option>
+            <option value="6">Mono</option>
+            <option value="7">Conejo</option>
+          </select>   
+        </div>
+      </div>
+    </div>  
+    <div class="card-footer">
+      <button class="btn btn-primary" id="btn-enviar">Enviar</button>
+      <a href="lista_clientes.html" class="btn btn-secondary">Salir</a>
+    </div>
+  </div>
+  
+</body>
+<script src="js/crear_mascota.js"></script>
+</html>

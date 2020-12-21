@@ -27,4 +27,61 @@ router.get('/obtener-por-idcliente-idtipo/:id_cliente/:id_tipo_servicio', cors()
   
   });
 
+  router.get('/obtener-lista', cors(), async (req, res, next) => {
+    console.log("obtener lista servicios");
+    console.log("request ",req)
+  
+  
+  
+    let result =await db.obtenerListaServicios()
+    console.log("result ",result.rows);
+    res.send(result.rows);
+  
+  });
+
+  router.post('/insertar',cors(),async(req,res,next)=>{
+    console.log("insertar servicio")
+    var result={};
+    console.log("params", req.body);
+  
+    var servicio=req.body;
+    result= await db.insertarServicio(servicio);
+  
+    if(result.rows){
+        res.send(result.rows[0]);
+    }else{
+        res.send("No se pudo insertar");
+    }
+  
+  });
+
+  router.put('/actualizar',cors(),async(req,res,next)=>{
+    console.log("actualizar servicio")
+    var result={};
+    console.log("params", req.body);
+  
+    var servicio=req.body;
+    result= await db.actualizarServicio(servicio);
+  
+  
+    res.send("Servicio actualizado");
+    
+  
+  });
+  
+  
+  router.delete('/eliminar/:id',cors(),async(req,res,next)=>{
+    console.log("request desde el lado cliente",req)
+    console.log("parametros ", req.params);
+    console.log("elimina servicio por ID ", req.params.id);
+    var result={};
+  
+    result= await db.eliminarServicio(req.params.id);
+  
+    res.send("Servicio eliminado");
+  
+  
+  });
+  
+
   module.exports = router;

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mascotas</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    </head>
+
+  <body>
+    <br><br>
+      <div class="row">
+        <div class="col-md-2">
+          <h3 class="card-title">Clientes&nbsp;</h3>
+        </div>
+        <div class="col-md-6">
+          <div style="text-align:right">
+            <a href="crear_cliente.html" class="btn btn-primary ">Nuevo</a>
+            <a href="index.html" class="btn btn-secondary ">Salir</a>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div class="col-md-8">
+        <table  class="table table-hover table-bordered">
+              <thead class="table-active">
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Direccion</th>
+                  <th>Telefono</th>
+              </thead>
+              <tbody id="tblListaClientes">
+              </tbody>
+        </table>
+    </div>
+  </body>
+  <script src="js/lista_clientes.js" ></script>
+</html>

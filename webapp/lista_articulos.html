@@ -5,17 +5,17 @@
     <title>Mascotas</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <link rel="stylesheet" href="/css/bootstrap.css">
-  </head>
+    </head>
 
   <body>
-    <br><br>
-    <div class="row">
+      <br><br>
+      <div class="row">
         <div class="col-md-2">
-          <h3 class="card-title">Mascotas&nbsp;</h3>
+          <h3 class="panel-title">Articulos&nbsp;</h3>
         </div>
         <div class="col-md-6">
-          <div style="text-align:right">
-            <a href="crear_mascota.html" class="btn btn-primary ">Nuevo</a>
+          <div  style="text-align:right">
+            <a href="crear_articulo.html" class="btn btn-primary ">Nuevo</a>
             <a href="index.html" class="btn btn-secondary ">Salir</a>
           </div>
         </div>
@@ -23,17 +23,17 @@
       <br><br>
       <div class="col-md-8">
       <table class="table table-hover table-bordered">
-          <thead class="table-active"> 
-              <th>ID</th>
-              <th>Nombre</th>
-              <th>Tipo</th>
-              <th>Cliente</th>
-          </thead>
-          <tbody id="tblListaMascotas">
-          </tbody>
+            <thead class="table-active">
+                <th>ID</th>
+                <th>Descripcion</th>
+                <th>Precio publico</th>
+                <th>Precio mayorista</th>
+                <th>Activo</th>
+            </thead>
+            <tbody id="tblListaArticulos">
+            </tbody>
       </table>
     </div>
-
   </body>
-  <script src="js/lista_mascotas.js" ></script>
+  <script src="js/lista_articulos.js" ></script>
 </html>

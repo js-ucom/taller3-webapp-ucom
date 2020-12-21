@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crear servicio</title>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Nuevo servicio</h2>
+      </div>
+    <div class="card-body">
+
+      <div class="row">
+        <div class="col-md-6">
+          <label  class="label" for="fecha_servicio">Fecha del servicio</label>
+          <input
+            type="date"
+            value="2020-12-11"
+            id="fecha_servicio"
+            name="fecha_servicio"
+            placeholder=""
+          />
+
+          <br><br>
+
+          <label class="label" for="cliente">Cliente</label>
+          <select class="custom-select" id="selectClientes" name="selectClientes">     
+          </select>
+
+          <br><br>
+          <label class="label" for="selectMascotas">Mascota</label>
+          <select class="custom-select" id="selectMascotas" name="selectMascotas">
+          </select>
+
+          <br><br>
+          <label for="selectTipos">Servicio</label>
+          <select class="custom-select" id="selectTipos" name="selectTipos">
+          </select>
+
+          <br><br>
+          <label class="label" for="selectEstados">Estados</label>
+          <select class="custom-select" id="selectEstados" name="selectEstados">
+            <option value="en_proceso">En proceso</option>
+            <option value="completo">Completo</option>
+            <option value="pendiente">Pendiente</option>
+          </select> 
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary" id="btn-enviar">Enviar</button>
+        <a href="lista_servicios.html" class="btn btn-secondary">Salir</a>
+      </div>  
+  </div>
+  </body>
+  <script src="js/cargar_clientes.js"></script>
+  <script src="js/cargar_mascotas.js"></script>
+  <script src="js/cargar_tipo_servicio.js"></script>
+  <script src="js/crear_servicio.js"></script>
+</html>

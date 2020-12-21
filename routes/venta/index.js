@@ -17,31 +17,23 @@ const {
   Client
 } = require('pg');
 
-router.get('/obtener-por-id/:id', cors(), async (req, res, next) => {
-    console.log("obtener cliente por ID ", req.params.id);
-  
-    let result = await db.obtenerClientePorID(req.params.id);
-    console.log("cliente", result[0]);
-    res.send(result.rows);
-  
-  });
-
-  router.get('/obtener-lista', cors(), async (req, res, next) => {
-    console.log("obtener lista clientes");
+router.get('/obtener-lista', cors(), async (req, res, next) => {
+    console.log("obtener lista ventas");
     console.log("request ",req)
-    let result =await db.obtenerListaClientes()
+ 
+    let result =await db.obtenerListaVentas()
     console.log("result ",result.rows);
     res.send(result.rows);
   
   });
-
+  
   router.post('/insertar',cors(),async(req,res,next)=>{
-    console.log("insertar cliente")
+    console.log("insertar venta")
     var result={};
     console.log("params", req.body);
   
-    var cliente=req.body;
-    result= await db.insertarCliente(cliente);
+    var venta=req.body;
+    result= await db.insertarVenta(venta);
   
     if(result.rows){
         res.send(result.rows[0]);
@@ -52,30 +44,26 @@ router.get('/obtener-por-id/:id', cors(), async (req, res, next) => {
   });
   
   router.put('/actualizar',cors(),async(req,res,next)=>{
-    console.log("actualizar cliente")
+    console.log("actualizar venta")
     var result={};
     console.log("params", req.body);
   
-    var cliente=req.body;
-    result= await db.actualizarCliente(cliente);
+    var venta=req.body;
+    result= await db.actualizarVenta(venta);
   
-  
-    res.send("Cliente actualizado");
-    
+    res.send("Venta actualizada");
   
   });
   
   
-  router.delete('/eliminar/:id',cors(),async(req,res,next)=>{
+  router.delete('/eliminar/:venta_id',cors(),async(req,res,next)=>{
     console.log("request desde el lado cliente",req)
     console.log("parametros ", req.params);
-    console.log("eliminar cliente por ID ", req.params.id);
+    console.log("eliminar venta por ID ", req.params.venta_id);
     var result={};
   
-    result= await db.eliminarCliente(req.params.id);
+    result= await db.eliminarVenta(req.params.venta_id);
   
-    res.send("Cliente eliminado");
-  
-  
+    res.send("Venta eliminada");
   });
   module.exports = router;

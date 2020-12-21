@@ -56,15 +56,14 @@ router.get('/obtener-lista', cors(), async (req, res, next) => {
   });
   
   
-  router.delete('/eliminar/:id',cors(),async(req,res,next)=>{
+  router.delete('/eliminar/:articulo_id',cors(),async(req,res,next)=>{
     console.log("request desde el lado cliente",req)
     console.log("parametros ", req.params);
-    console.log("eliminar articulo por ID ", req.params.id);
+    console.log("eliminar articulo por ID ", req.params.articulo_id);
     var result={};
   
-    result= await db.eliminarArticulo(req.params.id);
+    result= await db.eliminarArticulo(req.params.articulo_id);
   
     res.send("Articulo eliminado");
-  
-  
   });
+  module.exports = router;

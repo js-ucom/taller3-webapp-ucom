@@ -18,7 +18,7 @@ function listaMascotas() {
             console.log("fila: ", value, " indice: " + index);
       
             // Agregamos las filas
-            var row = tabla.insertRow(index + 1);
+            var row = tabla.insertRow();
           
             //Agregamos las columnas de la fila
             var cell1 = row.insertCell(0);
