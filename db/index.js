@@ -211,7 +211,7 @@ function actualizarServicio(datos){
     console.log("db => actualizarServicio ")
     console.log("datos =>", datos)
     try {
-        const res = pool.query(SQL_ACTUALIZAR_SERVICIO,[datos.cliente_id,datos.estado,datos.id_tipo_servicio,datos.id_mascota]);
+        const res = pool.query(SQL_ACTUALIZAR_SERVICIO,[datos.id_cliente,datos.estado,datos.id_tipo_servicio,datos.id_mascota,datos.id_tipo_servicio]);
         console.log("res", res);
         return res;
     } catch(err) {

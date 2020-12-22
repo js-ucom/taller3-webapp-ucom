@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "665dc7aa-ab95-45fe-afcb-b7139ec99d43",
+		"name": "tienda_mascotas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "obtener_mascotas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3005/mascota/obtener-lista"
+			},
+			"response": []
+		},
+		{
+			"name": "obtener_articulos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3005/articulo/obtener-lista"
+			},
+			"response": []
+		},
+		{
+			"name": "obtener_mascotas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3005/mascota/obtener-lista"
+			},
+			"response": []
+		},
+		{
+			"name": "obtener_mascotas Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3005/mascota/obtener"
+			},
+			"response": []
+		},
+		{
+			"name": "obtener_ventas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3005/venta/obtener-lista"
+			},
+			"response": []
+		},
+		{
+			"name": "obtener_servicios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3005/venta/obtener-lista"
+			},
+			"response": []
+		},
+		{
+			"name": "obtener_clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3005/cliente/obtener-lista"
+			},
+			"response": []
+		},
+		{
+			"name": "obtener_tipos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3005/tipo_servicio/obtener-lista"
+			},
+			"response": []
+		},
+		{
+			"name": "obtener-mascotas-por-categoria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3005/mascota/obtener-por-categoria?id_categoria=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"mascota",
+						"obtener-por-categoria"
+					],
+					"query": [
+						{
+							"key": "id_categoria",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener-mascotas-por-cliente-tipo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3005/mascota/obtener-por-cliente-tipo?nombre_cliente=Cristiano&tipo_mascota=perro&nombre_mascota=tobby",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"mascota",
+						"obtener-por-cliente-tipo"
+					],
+					"query": [
+						{
+							"key": "nombre_cliente",
+							"value": "Cristiano"
+						},
+						{
+							"key": "tipo_mascota",
+							"value": "perro"
+						},
+						{
+							"key": "nombre_mascota",
+							"value": "tobby"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar mascota",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:3005/mascota/eliminar/3"
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:3005/cliente/eliminar/4"
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar venta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:3005/venta/eliminar/7"
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar articulo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:3005/articulo/eliminar/7"
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar servicio",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:3005/servicio/eliminar/9"
+			},
+			"response": []
+		},
+		{
+			"name": "insertar-mascota",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"pancho\",\r\n    \"id_categoria\":\"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3005/mascota/insertar"
+			},
+			"response": []
+		},
+		{
+			"name": "insertar-cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"pancho\",\r\n    \"id_categoria\":\"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3005/cliente/insertar"
+			},
+			"response": []
+		},
+		{
+			"name": "insertar-articulo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descripcion\":\"collar perro\",\r\n    \"precio_publico\":\"20000\",\r\n    \"precio_mayorista\":\"18000\",\r\n    \"activo\":\"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3005/articulo/insertar"
+			},
+			"response": []
+		},
+		{
+			"name": "insertar-venta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descripcion\":\"collar perro\",\r\n    \"precio_publico\":\"20000\",\r\n    \"precio_mayorista\":\"18000\",\r\n    \"activo\":\"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3005/venta/insertar"
+			},
+			"response": []
+		},
+		{
+			"name": "insertar-servicio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha_servicio\":\"2020-12-20\",\r\n    \"id_cliente\":\"2\",\r\n    \"estado\":\"pendiente\",\r\n    \"id_tipo_servicio\":\"4\",\r\n    \"id_mascota\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3005/servicio/insertar"
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar mascota",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"pancho\",\r\n    \"id_categoria\":\"3\",\r\n    \"id_mascota\": 14\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3005/mascota/actualizar"
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nombre\":\"test\",\r\n    \"apellido\":\"test\",\r\n    \"direccion\":\"mi casa\",\r\n    \"telefono\":\"12345\",\r\n    \"id_cliente\":\"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3005/cliente/actualizar"
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar venta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cliente_id\":\"1\",\r\n    \"monto_total\":\"11000\",\r\n    \"activo\":\"false\",\r\n    \"venta_id\":\"6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3005/venta/actualizar"
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar articulo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"descripcion\":\"actuali\",\r\n    \"precio_publico\":\"20000\",\r\n    \"precio_mayorista\":\"18000\",\r\n    \"activo\":\"false\",\r\n    \"articulo_id\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3005/articulo/actualizar"
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar servicio",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"descripcion\":\"actuali\",\r\n    \"precio_publico\":\"20000\",\r\n    \"precio_mayorista\":\"18000\",\r\n    \"activo\":\"false\",\r\n    \"articulo_id\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3005/servicio/actualizar"
+			},
+			"response": []
+		},
+		{
+			"name": "test-servicio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3005/mascota/test"
+			},
+			"response": []
+		},
+		{
+			"name": "obtener_categoria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3005/categoria/obtener-por-id/9"
+			},
+			"response": []
+		},
+		{
+			"name": "obtener_articulos Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3005/articulo/obtener-lista"
+			},
+			"response": []
+		},
+		{
+			"name": "insertar-venta Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descripcion\":\"collar perro\",\r\n    \"precio_publico\":\"20000\",\r\n    \"precio_mayorista\":\"18000\",\r\n    \"activo\":\"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3005/venta/insertar"
+			},
+			"response": []
+		}
+	]
+}

@@ -37,34 +37,47 @@
     </nav>
     <div class="card">
       <div class="card-header">
-        <h2 class="card-title">Nuevo cliente&nbsp;</h2>
+        <h2 class="card-title">Nuevo articulo&nbsp;</h2>
       </div>
     <div class="card-body">
       <div class="row">
         <div class="col-md-6">
-          <label class="label" for="nombre">Nombre</label>
-          <input class="control" type="text" id="nombre" name="nombre" placeholder="" />
+          <label  class="label" for="fecha_venta">Fecha venta</label>
+          <input
+            type="date"
+            value="2020-12-21"
+            id="fecha_venta"
+            name="fecha_venta"
+            placeholder=""
+          />
 
           <br><br>
-          <label class="label" for="apellido">Apellido</label>
-          <input class="control" type="text" id="apellido" name="apellido" placeholder="" />
+
+          <label class="label" for="cliente">Cliente</label>
+          <select class="custom-select" id="selectClientes" name="selectClientes">     
+          </select>
 
           <br><br>
-          <label class="label" for="direccion">Direccion</label>
-          <input class="control" type="text" id="direccion" name="direccion" placeholder="" />
-          
+          <label class="label" for="nro_factura">Nro Factura</label>
+          <input class="control" type="text" id="nro_factura" name="nro_factura" placeholder="001-000xxx" />
+
           <br><br>
-          <label class="label" for="telefono">Telefono</label>
-          <input class="control" type="text" id="telefono" name="telefono" placeholder="" /> 
+          <label class="label" for="monto_total">Monto total</label>
+          <input class="control" type="text" id="monto_total" name="monto_total" placeholder="" />
+
+          <br><br>
+      
+          <input type="hidden" id="activo" name="activo" value="true" /> 
         </div>
       </div>
     </div>  
     <div class="card-footer">
       <button class="btn btn-info" id="btn-enviar">Enviar</button>
-      <a href="lista_clientes.html" class="btn btn-secondary">Salir</a>
+      <a href="lista_ventas.html" class="btn btn-secondary">Salir</a>
     </div>
   </div>
   
 </body>
-<script src="js/crear_cliente.js"></script>
+<script src="js/cargar_clientes.js"></script>
+<script src="js/crear_venta.js"></script>
 </html>
